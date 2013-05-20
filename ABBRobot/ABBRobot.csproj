@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F85BD86-BCAA-4439-85DA-1554E82B0FE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ABBRobot</RootNamespace>
+    <AssemblyName>ABBRobot</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ABB.Robotics.Math">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\ABB Industrial IT\Robotics IT\RobotStudio\5.15\ABB.Robotics.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\ABB Industrial IT\Robotics IT\RobotStudio\5.15\ABB.Robotics.RobotStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.CADConverter">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\ABB Industrial IT\Robotics IT\RobotStudio\5.15\ABB.Robotics.RobotStudio.CADConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.Controllers">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\ABB Industrial IT\Robotics IT\RobotStudio\5.15\ABB.Robotics.RobotStudio.Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.Documents">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\ABB Industrial IT\Robotics IT\RobotStudio\5.15\ABB.Robotics.RobotStudio.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.Environment">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\ABB Industrial IT\Robotics IT\RobotStudio\5.15\ABB.Robotics.RobotStudio.Environment.dll</HintPath>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.Proxy, Version=5.13.3828.1034, Culture=neutral, PublicKeyToken=1a2307fefa76bf33, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\ABB Industrial IT\Robotics IT\RobotStudio\5.15\ABB.Robotics.RobotStudio.Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.Stations">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\ABB Industrial IT\Robotics IT\RobotStudio\5.15\ABB.Robotics.RobotStudio.Stations.dll</HintPath>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.Stations.Forms">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\ABB Industrial IT\Robotics IT\RobotStudio\5.15\ABB.Robotics.RobotStudio.Stations.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABBRobot.cs" />
+    <Compile Include="Conveyor.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="Picker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorter.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
